@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rahul Dounde Portfolio</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f7fb;
+}
+
+/* HEADER */
+header {
+  background: linear-gradient(45deg, #0b5ed7, #0056b3);
+  color: white;
+  text-align: center;
+  padding: 25px;
+}
+
+/* NAV */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+  background: white;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+nav button {
+  padding: 10px 15px;
+  border: none;
+  background: #0b5ed7;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+nav button:hover {
+  background: #084298;
+}
+
+/* SECTION */
+.section {
+  display: none;
+  max-width: 900px;
+  margin: 30px auto;
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.active {
+  display: block;
+}
+
+h2 {
+  color: #0b5ed7;
+}
+
+/* PROJECT CARDS */
+.project {
+  padding: 10px;
+  margin: 10px 0;
+  border-left: 4px solid #0b5ed7;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 15px;
+  color: gray;
+}
+</style>
+
+</head>
+<body>
+
+<header>
+  <h1>Rahul Dounde</h1>
+  <p>Full Stack Developer | AI Enthusiast</p>
+</header>
+
+<nav>
+  <button onclick="showSection('about')">About</button>
+  <button onclick="showSection('projects')">Projects</button>
+  <button onclick="showSection('skills')">Skills</button>
+  <button onclick="showSection('contact')">Contact</button>
+</nav>
+
+<!-- ABOUT -->
+
+<div id="about" class="section active">
+  <h2>About Me</h2>
+  <p>
+    I am a 3rd-year Computer Science Engineering student passionate about backend development,
+    full-stack applications, and AI-based systems.
+  </p>
+</div>
+
+<!-- PROJECTS -->
+
+<div id="projects" class="section">
+  <h2>Projects</h2>
+
+  <div class="project">
+    <strong>CLI Calculator</strong>
+    <p>Basic Python calculator using CLI.</p>
+  </div>
+
+  <div class="project">
+    <strong>Number Guessing Game</strong>
+    <p>Interactive CLI game using Python.</p>
+  </div>
+
+  <div class="project">
+    <strong>Password Generator</strong>
+    <p>Secure password generator using Python.</p>
+  </div>
+
+  <div class="project">
+    <strong>AI Automation Platform</strong>
+    <p>AI-based workflow automation system.</p>
+  </div>
+
+</div>
+
+<!-- SKILLS -->
+
+<div id="skills" class="section">
+  <h2>Skills</h2>
+  <ul>
+    <li>HTML, CSS, JavaScript</li>
+    <li>React, Node.js</li>
+    <li>Python</li>
+    <li>MongoDB, MySQL</li>
+    <li>Git & GitHub</li>
+  </ul>
+</div>
+
+<!-- CONTACT -->
+
+<div id="contact" class="section">
+  <h2>Contact</h2>
+  <p>Email: rahuldounde1@gmail.com</p>
+  <p>GitHub: https://github.com/rahuldounde21</p>
+  <p>LinkedIn: https://www.linkedin.com/in/rahul-dounde-92b262395</p>
+</div>
+
+<footer>
+  <p>© 2025 Rahul Dounde</p>
+</footer>
+
+<script>
+function showSection(id) {
+  document.querySelectorAll('.section').forEach(sec => {
+    sec.classList.remove('active');
+  });
+  document.getElementById(id).classList.add('active');
+}
+</script>
+
+</body>
+</html>
